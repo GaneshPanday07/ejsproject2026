@@ -1,0 +1,131 @@
+<%- include('./base/header.ejs')%>
+<div class="container">
+  <div class="alert bg-success my-3">
+    <h4 class="text-center text-white">Edit Student</h4>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <form action="/edit/student/<%= student._id %>" method="post">
+        <div class="mt-1">
+          <label class="form-label">Roll NO</label>
+          <input
+            type="text"
+            ,
+            class="form-control"
+            placeholder="Enter Roll No"
+            name="rollno"
+            value="<%= student.rollno %>"
+            required
+            pattern="[0-9]+"
+            oninvalid="
+              if (this.validity.valueMissing) {
+                this.setCustomValidity('Roll Number is required.');
+              } else if (this.validity.patternMismatch) {
+                this.setCustomValidity(
+                  'Roll Number must contain only numbers.',
+                );
+              }
+            "
+            oninput="this.setCustomValidity('')"
+          />
+        </div>
+        <div class="mt-1">
+          <label class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Name"
+            name="studentName"
+            value="<%= student.studentName %>"
+            required
+            pattern="[A-Za-z ]+"
+            oninvalid="
+              if (this.validity.valueMissing) {
+                this.setCustomValidity('Name is require');
+              } else if (this.validity.patternMismatch) {
+                this.setCustomValidity('Name must contain only alphabets');
+              }
+            "
+            oninput="this.setCustomValidity('')"
+          />
+        </div>
+        <div class="mt-1">
+          <label class="form-label">Father Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Father Name"
+            name="fatherName"
+            value="<%= student.fatherName %>"
+            required
+            pattern="[A-Za-z ]+"
+            oninvalid="
+              if (this.validity.valueMissing) {
+                this.setCustomValidity('fatherName is require');
+              } else if (this.validity.patternMismatch) {
+                this.setCustomValidity(
+                  'fatherName must contain only alphabets',
+                );
+              }
+            "
+            oninput="this.setCustomValidity('')"
+          />
+        </div>
+        <div class="mt-1">
+          <label class="form-label">Adhar Card No</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Adhar Card No"
+            name="adharCardNo"
+            value="<%= student.adharCardNo %>"
+            required
+            pattern="[0-9]{12}"
+            oninvalid="
+              if (this.validity.valueMissing) {
+                this.setCustomValidity('AdharCardNo is require');
+              } else if (this.validity.patternMismatch) {
+                this.setCustomValidity('AdharCardNo must contain only numbers');
+              }
+            "
+            oninput="this.setCustomValidity('')"
+          />
+        </div>
+        <div class="mt-1">
+          <label class="form-label">Mobile No</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Mobile No"
+            name="mobileNo"
+            value="<%= student.mobileNo %>"
+            required
+            pattern="[0-9]{10}"
+            oninvalid="
+              if (this.validity.valueMissing) {
+                this.setCustomValidity('mobileNo is require');
+              } else if (this.validity.patternMismatch) {
+                this.setCustomValidity('mobileNo must contain only numbers');
+              }
+            "
+            oninput="this.setCustomValidity('')"
+          />
+        </div>
+        <div class="text-center">
+          <input
+            type="submit"
+            class="btn btn-success mt-2"
+            value="Edit Student"
+          />
+          <a href="/students" class="btn btn-danger mt-2">Cancel</a>
+        </div>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<%- include('./base/footer.ejs')%>
