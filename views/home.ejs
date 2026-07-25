@@ -16,18 +16,6 @@
             class="form-control"
             placeholder="Enter Roll No"
             name="rollno"
-            required
-            pattern="[0-9]+"
-            oninvalid="
-              if (this.validity.valueMissing) {
-                this.setCustomValidity('Roll Number is required.');
-              } else if (this.validity.patternMismatch) {
-                this.setCustomValidity(
-                  'Roll Number must contain only numbers.',
-                );
-              }
-            "
-            oninput="this.setCustomValidity('')"
           />
         </div>
         <div class="mt-1">
@@ -37,16 +25,6 @@
             class="form-control"
             placeholder="Enter Name"
             name="studentName"
-            required
-            pattern="[A-Za-z ]+"
-            oninvalid="
-              if (this.validity.valueMissing) {
-                this.setCustomValidity('Name is require');
-              } else if (this.validity.patternMismatch) {
-                this.setCustomValidity('Name must contain only alphabets');
-              }
-            "
-            oninput="this.setCustomValidity('')"
           />
         </div>
         <div class="mt-1">
@@ -56,19 +34,7 @@
             class="form-control"
             placeholder="Enter Father Name"
             name="fatherName"
-            required
-            pattern="[A-Za-z ]+"
-            oninvalid="
-              if (this.validity.valueMissing) {
-                this.setCustomValidity('fatherName is require');
-              } else if (this.validity.patternMismatch) {
-                this.setCustomValidity(
-                  'fatherName must contain only alphabets',
-                );
-              }
-            "
-            oninput="this.setCustomValidity('')"
-          />
+            />
         </div>
         <div class="mt-1">
           <label class="form-label">Adhar Card No</label>
@@ -77,17 +43,7 @@
             class="form-control"
             placeholder="Enter Adhar Card No"
             name="adharCardNo"
-            required
-            pattern="[0-9]{12}"
-            oninvalid="
-              if (this.validity.valueMissing) {
-                this.setCustomValidity('AdharCardNo is require');
-              } else if (this.validity.patternMismatch) {
-                this.setCustomValidity('AdharCardNo must contain only numbers');
-              }
-            "
-            oninput="this.setCustomValidity('')"
-          />
+            />
         </div>
         <div class="mt-1">
           <label class="form-label">Mobile No</label>
@@ -96,17 +52,7 @@
             class="form-control"
             placeholder="Enter Mobile No"
             name="mobileNo"
-            required
-            pattern="[0-9]{10}"
-            oninvalid="
-              if (this.validity.valueMissing) {
-                this.setCustomValidity('mobileNo is require');
-              } else if (this.validity.patternMismatch) {
-                this.setCustomValidity('mobileNo must contain only numbers');
-              }
-            "
-            oninput="this.setCustomValidity('')"
-          />
+            />
         </div>
         <div class="text-center">
           <input
