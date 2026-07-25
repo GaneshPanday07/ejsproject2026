@@ -9,7 +9,7 @@ app.use(student)
 connect();
 
 
-
+//server code
 app.listen(3000, (err)=> {
     if(err){
         console.log(err)
