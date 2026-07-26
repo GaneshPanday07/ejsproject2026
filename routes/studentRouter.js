@@ -5,9 +5,13 @@ const StudentController = require('../Controllers/StudentController')
 
 router.use(express.urlencoded({extended: false}))
 
+router.get('/welcome', (req, res)=>{
+    res.render('welcome')
+})
+
 //get method: http://localhost:3000/
 router.get('/', (req, res)=>{
-    StudentController.students(req,res)
+    res.render('home')
 })
 
 router.post('/add/student', (req, res)=> {

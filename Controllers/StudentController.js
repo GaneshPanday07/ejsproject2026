@@ -1,8 +1,5 @@
 const Student = require('../models/Student')
 
-const students = (req, res)=> {
-    res.render('home')
-}
 
 const addstudent = async(req, res)=> {
     try{
@@ -71,7 +68,6 @@ const deleteStudent = async(req, res) => {
     }
 }
 module.exports = {
-  students,
   addstudent,
   getstudents,
   getStudentForEdit,
