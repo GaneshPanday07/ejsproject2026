@@ -1,6 +1,8 @@
 const express = require('express')
-const StudentController = require('../Controllers/StudentController')
 const router = express.Router();
+const StudentController = require('../Controllers/StudentController')
+
+
 router.use(express.urlencoded({extended: false}))
 
 //get method: http://localhost:3000/
