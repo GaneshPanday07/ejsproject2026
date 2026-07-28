@@ -1,9 +1,8 @@
 const express = require('express')
 const router = express.Router();
-
+const ValidationMiddleware = require('../middleware/ValidationMiddleware')
 const StudentController = require('../Controllers/StudentController')
-
-
+const StudentValidation = require('../validation/StudentValidation')
 router.use(express.urlencoded({extended: false}))
 
 router.get('/welcome', (req, res)=>{
